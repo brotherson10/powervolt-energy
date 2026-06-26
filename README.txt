@@ -1,14 +1,26 @@
-Powervolt Energy - Landing Page
+# ⚡ Powervolt Energy
 
-Como usar:
-1. Abra o arquivo index.html no navegador.
-2. Para trocar as imagens do slider, adicione 3 imagens na pasta assets/img com estes nomes:
-   - slide-1.jpg
-   - slide-2.jpg
-   - slide-3.jpg
-3. Você também pode adicionar imagens reais na seção de obras depois.
+Landing page moderna para empresa de energia solar.
 
-Arquivos principais:
-- index.html
-- style.css
-- script.js
+## 🚀 Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+
+## ✨ Funcionalidades
+
+- Layout responsivo
+- Hero com slider
+- Cards interativos
+- Animações de scroll
+- Glassmorphism
+- Design moderno
+
+## 🌐 Deploy
+
+https://powervolt-energy.netlify.app/
+
+## 👨‍💻 Desenvolvido por
+
+Brotherson Américo
