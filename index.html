@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/web/paineis-telha-900.webp" imagesrcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w" imagesizes="(max-width: 900px) 92vw, 34vw" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=6">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -169,9 +169,12 @@
           </figure>
         </div>
       </div>
+    </section>
 
+    <!-- FAIXA DE CONFIANÇA (âmbar) -->
+    <section class="band-amber" aria-label="Porquê a Powervolt">
       <div class="container">
-        <ul class="trust reveal" aria-label="Porquê a Powervolt">
+        <ul class="trust">
           <li><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Avaliação 5,0 no Google</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Acompanhamento do início ao fim</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Casas e pequenos negócios</li>
@@ -180,8 +183,12 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section class="section" id="sobre">
+    <!-- SOBRE (foto de fundo) -->
+    <section class="section bg-photo" id="sobre">
+      <picture class="bg-photo-media" aria-hidden="true">
+        <source media="(max-width: 700px)" srcset="assets/img/web/faixa-paineis-720.webp" width="720" height="660">
+        <img src="assets/img/web/faixa-paineis-1200.webp" width="1200" height="675" alt="" loading="lazy">
+      </picture>
       <div class="container split">
         <div class="reveal">
           <span class="section-tag">Quem somos</span>
@@ -195,7 +202,7 @@
     </section>
 
     <!-- SOLUÇÕES -->
-    <section class="section" id="solucoes">
+    <section class="section bg-light" id="solucoes">
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Soluções</span>
@@ -241,7 +248,7 @@
     </section>
 
     <!-- COMO TRABALHAMOS -->
-    <section class="section" id="processo">
+    <section class="section bg-graphite" id="processo">
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Como trabalhamos</span>
@@ -251,25 +258,21 @@
         <ol class="steps">
           <li class="step reveal">
             <span class="step-icon"><svg aria-hidden="true"><use href="#i-search"/></svg></span>
-            <span class="step-number">01</span>
             <h3>Análise</h3>
             <p>Percebemos o seu consumo, o espaço disponível e o que pretende poupar.</p>
           </li>
           <li class="step reveal">
             <span class="step-icon"><svg aria-hidden="true"><use href="#i-plan"/></svg></span>
-            <span class="step-number">02</span>
             <h3>Projeto</h3>
             <p>Desenhamos uma solução ajustada à sua realidade e explicamos cada escolha.</p>
           </li>
           <li class="step reveal">
             <span class="step-icon"><svg aria-hidden="true"><use href="#i-tool"/></svg></span>
-            <span class="step-number">03</span>
             <h3>Instalação</h3>
             <p>A nossa equipa instala o sistema com cuidado, segurança e o mínimo de incómodo.</p>
           </li>
           <li class="step reveal">
             <span class="step-icon"><svg aria-hidden="true"><use href="#i-power"/></svg></span>
-            <span class="step-number">04</span>
             <h3>Em funcionamento</h3>
             <p>Colocamos tudo a funcionar e continuamos por perto, com o mesmo acompanhamento direto.</p>
           </li>
@@ -278,7 +281,7 @@
     </section>
 
     <!-- OBRAS -->
-    <section class="section" id="obras">
+    <section class="section bg-light" id="obras">
       <div class="container">
         <div class="section-head section-head-row reveal">
           <div>
@@ -322,7 +325,7 @@
     </section>
 
     <!-- OPINIÕES -->
-    <section class="section" id="opinioes">
+    <section class="section bg-dark" id="opinioes">
       <div class="container">
         <div class="reviews-head reveal">
           <div>
@@ -369,7 +372,7 @@
     </section>
 
     <!-- CONTACTO -->
-    <section class="section" id="contacto">
+    <section class="section bg-amber" id="contacto">
       <div class="container">
         <div class="contact reveal">
           <div class="contact-info">

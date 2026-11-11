@@ -12,8 +12,14 @@
   --line: rgba(255, 255, 255, .08);
   --line-strong: rgba(255, 255, 255, .14);
   --glass: rgba(255, 255, 255, .04);
-  --radius: 28px;
-  --radius-sm: 18px;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --paper: #f6f3ec;
+  --paper-card: #ffffff;
+  --ink: #07090d;
+  --ink-muted: #4b5361;
+  --amber-dark: #9a5700;
+  --line-dark: rgba(7, 9, 13, .1);
   --wa: #25d366;
   --header-h: 76px;
   --ease: cubic-bezier(.2, .7, .2, 1);
@@ -167,7 +173,7 @@ p {
 .eyebrow {
   padding: 8px 14px;
   border: 1px solid rgba(255, 173, 20, .25);
-  border-radius: 999px;
+  border-radius: 8px;
   background: rgba(255, 173, 20, .06);
   letter-spacing: .1em;
 }
@@ -247,7 +253,7 @@ p {
 }
 
 .header.scrolled {
-  background: rgba(7, 9, 13, .78);
+  background: rgba(7, 9, 13, .94);
   border-color: var(--line);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
@@ -388,18 +394,17 @@ p {
 
 .hero-media {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 14px;
-  height: clamp(440px, 46vw, 600px);
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
 }
 
+/* Fotos: cantos retos e sempre na proporção original (3:4) */
 .hm {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid var(--line-strong);
+  border-radius: 0;
   background: var(--bg-soft);
+  aspect-ratio: 3 / 4;
 }
 
 .hm img {
@@ -410,6 +415,7 @@ p {
 
 .hm-main {
   grid-row: span 2;
+  aspect-ratio: auto;
 }
 
 .hm-main::after {
@@ -428,7 +434,7 @@ p {
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  border-radius: 999px;
+  border-radius: 8px;
   border: 1px solid var(--line-strong);
   background: rgba(7, 9, 13, .6);
   backdrop-filter: blur(12px);
@@ -443,31 +449,112 @@ p {
   color: var(--solar);
 }
 
+/* ---------- Fundos das secções ---------- */
+.band-amber {
+  background: var(--solar);
+  color: var(--solar-ink);
+}
+
 .trust {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: clamp(48px, 7vw, 88px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: var(--glass);
 }
 
 .trust li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 20px 22px;
-  color: var(--text);
-  font-weight: 600;
-  font-size: .94rem;
+  justify-content: center;
+  gap: 10px;
+  padding: 22px 18px;
+  color: var(--solar-ink);
+  font-weight: 700;
+  font-size: .95rem;
+  text-align: center;
 }
 
 .trust li + li {
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(22, 16, 0, .16);
 }
 
 .trust .ico {
-  color: var(--solar);
+  color: var(--solar-ink);
+}
+
+.section.bg-photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(96px, 12vw, 168px) 0;
+}
+
+.bg-photo-media,
+.bg-photo-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-photo-media {
+  z-index: -2;
+}
+
+.bg-photo-media img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg, rgba(7, 9, 13, .92) 0%, rgba(7, 9, 13, .78) 50%, rgba(7, 9, 13, .55) 100%);
+}
+
+.bg-photo .big-text {
+  color: #e6eaf0;
+}
+
+.bg-graphite {
+  background: var(--bg-soft);
+}
+
+.bg-dark {
+  background: var(--bg);
+}
+
+.bg-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.bg-light h2,
+.bg-light h3 {
+  color: var(--ink);
+}
+
+.bg-light p {
+  color: var(--ink-muted);
+}
+
+.bg-light .section-tag {
+  color: var(--amber-dark);
+}
+
+.bg-light .btn-ghost {
+  color: var(--ink);
+  border-color: rgba(7, 9, 13, .2);
+  background: transparent;
+}
+
+.bg-light .btn-ghost:hover {
+  border-color: var(--amber-dark);
+  background: rgba(255, 173, 20, .12);
+}
+
+.bg-amber {
+  background: var(--solar);
 }
 
 /* ---------- Secções ---------- */
@@ -491,10 +578,6 @@ p {
 
 #contacto {
   padding-bottom: clamp(56px, 7vw, 88px);
-}
-
-#sobre {
-  border-top: 1px solid var(--line);
 }
 
 .split {
@@ -523,10 +606,11 @@ p {
   flex-direction: column;
   padding: 30px;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .015));
+  border: 1px solid var(--line-dark);
+  background: var(--paper-card);
+  box-shadow: 0 1px 2px rgba(7, 9, 13, .04), 0 12px 32px -18px rgba(7, 9, 13, .25);
   overflow: hidden;
-  transition: transform .35s var(--ease), border-color .35s;
+  transition: transform .35s var(--ease), border-color .35s, box-shadow .35s;
 }
 
 .card::before {
@@ -540,7 +624,22 @@ p {
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 173, 20, .45);
+  border-color: var(--solar);
+  box-shadow: 0 1px 2px rgba(7, 9, 13, .04), 0 22px 40px -20px rgba(7, 9, 13, .35);
+}
+
+.card .card-icon {
+  background: rgba(255, 173, 20, .16);
+  border-color: rgba(255, 173, 20, .4);
+  color: var(--amber-dark);
+}
+
+.card .card-number {
+  color: #9aa1ab;
+}
+
+.card .card-link {
+  color: var(--amber-dark);
 }
 
 .card:hover::before {
@@ -560,7 +659,7 @@ p {
   place-items: center;
   width: 56px;
   height: 56px;
-  border-radius: 16px;
+  border-radius: 10px;
   background: rgba(255, 173, 20, .1);
   border: 1px solid rgba(255, 173, 20, .25);
   color: var(--solar);
@@ -616,10 +715,6 @@ p {
 }
 
 /* Como trabalhamos */
-#processo {
-  background: linear-gradient(180deg, transparent, rgba(16, 20, 28, .7) 20%, rgba(16, 20, 28, .7) 80%, transparent);
-}
-
 .steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -632,17 +727,11 @@ p {
   padding: 28px 26px 30px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: var(--glass);
-}
-
-.step-number {
-  position: absolute;
-  top: 30px;
-  right: 26px;
+  background: rgba(255, 255, 255, .035);
 }
 
 .step h3 {
-  margin: 28px 0 8px;
+  margin: 24px 0 8px;
 }
 
 .step p {
@@ -653,21 +742,22 @@ p {
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 260px;
-  gap: 14px;
+  gap: 12px;
 }
 
+/* Fotos: cantos retos e sempre na proporção original (3:4) */
 .g-item {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  background: var(--bg-soft);
+  border-radius: 0;
+  background: #e7e2d7;
+  aspect-ratio: 3 / 4;
 }
 
 .g-big {
   grid-column: span 2;
   grid-row: span 2;
+  aspect-ratio: auto;
 }
 
 .g-item img {
@@ -685,7 +775,8 @@ p {
   position: absolute;
   inset: auto 0 0;
   padding: 40px 18px 16px;
-  background: linear-gradient(to top, rgba(7, 9, 13, .85), transparent);
+  background: linear-gradient(to top, rgba(7, 9, 13, .9) 0%, rgba(7, 9, 13, .55) 55%, transparent 100%);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
   font-weight: 600;
   font-size: .94rem;
 }
@@ -786,11 +877,11 @@ p {
 .contact {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
-  border-radius: calc(var(--radius) + 6px);
-  border: 1px solid rgba(255, 173, 20, .22);
+  border-radius: var(--radius);
   background:
-    radial-gradient(600px 400px at 0% 0%, rgba(255, 173, 20, .14), transparent 70%),
-    var(--bg-soft);
+    radial-gradient(600px 400px at 0% 0%, rgba(255, 173, 20, .12), transparent 70%),
+    var(--bg);
+  box-shadow: 0 30px 70px -30px rgba(22, 16, 0, .55);
   overflow: hidden;
 }
 
@@ -880,8 +971,7 @@ p {
 
 /* ---------- Rodapé ---------- */
 .footer {
-  border-top: 1px solid var(--line);
-  background: rgba(16, 20, 28, .5);
+  background: #040507;
 }
 
 .footer-grid {
@@ -1030,7 +1120,7 @@ p {
   }
 
   .trust li:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(22, 16, 0, .16);
   }
 
   .footer-grid {
@@ -1093,9 +1183,6 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero-media {
-    height: clamp(360px, 90vw, 520px);
-  }
 
   .cards,
   .reviews {
@@ -1108,7 +1195,6 @@ p {
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 200px;
   }
 
   .contact-map {
@@ -1150,13 +1236,7 @@ p {
   }
 
   .hero-media {
-    grid-template-columns: 1.4fr 1fr;
-    gap: 10px;
-    height: 400px;
-  }
-
-  .hm {
-    border-radius: var(--radius-sm);
+    gap: 8px;
   }
 
   .chip {
@@ -1173,13 +1253,11 @@ p {
     height: 15px;
   }
 
-  .trust {
-    grid-template-columns: 1fr;
-  }
-
-  .trust li + li {
-    border-left: 0;
-    border-top: 1px solid var(--line);
+  .trust li {
+    padding: 16px 10px;
+    font-size: .84rem;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .steps {
@@ -1187,8 +1265,7 @@ p {
   }
 
   .gallery {
-    grid-auto-rows: 160px;
-    gap: 10px;
+    gap: 8px;
   }
 
   .g-item figcaption {

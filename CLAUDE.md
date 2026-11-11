@@ -36,8 +36,10 @@
 - Destaque solar: `#ffad14` (variação clara `#ffd166`, texto sobre âmbar `#161000`)
 - Texto: `#f8fafc` · secundário: `#a7b0bd` · terciário: `#6f7a89`
 - Bordas: branco a 8% e 14%
+- **Secções claras:** fundo `#f6f3ec` (branco quente), cards `#ffffff`, texto `#07090d` / `#4b5361`. Em fundo claro o âmbar `#ffad14` não serve para texto: usar `#9a5700` em etiquetas e links, e o âmbar só em ícones e detalhes
 - Fonte: Inter (400, 500, 600, 700, 800)
-- Raio dos cards: 28px (18px nos elementos menores) · vidro usado com moderação
+- **Cantos:** fotos sempre com cantos retos (0) e na proporção original 3:4 (`aspect-ratio`, nunca altura fixa). Cards e balões de informação com 14px (10px nos menores, 8px em etiquetas). Botões continuam em cápsula
+- **Ritmo de fundos (inspirado em Soty Solar, iPower e Solfácil):** hero escuro → faixa âmbar → foto em ecrã inteiro com camada escura (Quem somos) → claro (Soluções) → grafite (Como trabalhamos) → claro (Obras) → escuro (Opiniões) → âmbar (Contacto) → preto (rodapé). Nunca duas secções seguidas com o mesmo fundo
 - Ícones: SVG de traço (1.8), definidos num sprite no topo do `index.html`
 - Botão flutuante de WhatsApp em verde `#25d366` (cor reconhecível do WhatsApp, única exceção à paleta)
 - Logo: `assets/img/web/logo-powervolt.webp` (original em `assets/img/logo-powervolt.png`)
@@ -52,7 +54,7 @@
 
 ## Estrutura atual
 
-`#inicio` (hero com 3 fotos + faixa de confiança) → `#sobre` → `#solucoes` (3 cards com orçamento por WhatsApp) → `#processo` (4 passos) → `#obras` (galeria) → `#opinioes` (nota Google + 3 opiniões) → `#contacto` (contactos, horário, mapa) → rodapé
+`#inicio` (hero com 3 fotos) → faixa âmbar de confiança → `#sobre` (foto de fundo) → `#solucoes` (3 cards com orçamento por WhatsApp) → `#processo` (4 passos, sem numeração) → `#obras` (galeria) → `#opinioes` (nota Google + 3 opiniões) → `#contacto` (contactos, horário, mapa) → rodapé
 
 SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-LD `LocalBusiness` (morada, geo, horário, `hasMap`, `sameAs`), mapa incorporado.
 
@@ -69,3 +71,4 @@ SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-L
 
 - Landing page criada pelo Brotherson e entregue
 - 11/11/2026: morada nova (Azambuja), dados da ficha do Google (horário, opiniões, mapa), refatoração visual completa, WhatsApp, SEO local (canonical, Open Graph, JSON-LD, sitemap) e imagens otimizadas (de ~1,1 MB para ~0,55 MB de imagens na página inteira, com a galeria em lazy load)
+- 11/11/2026 (2ª ronda): fundos alternados entre secções (claro, âmbar, foto, grafite), fotos com cantos retos na proporção original, cards com cantos menores, numeração tirada de "Como trabalhamos"
