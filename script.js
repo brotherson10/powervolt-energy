@@ -1,50 +1,48 @@
-const slides = document.querySelectorAll('.slide');
-const dotsContainer = document.querySelector('.slider-dots');
-let currentSlide = 0;
-let intervalId;
+// Cabeçalho: fundo sólido depois de rolar
+const header = document.querySelector('.header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
 
-slides.forEach((_, index) => {
-  const dot = document.createElement('button');
-  dot.className = `dot ${index === 0 ? 'active' : ''}`;
-  dot.setAttribute('aria-label', `Ir para slide ${index + 1}`);
-  dot.addEventListener('click', () => goToSlide(index));
-  dotsContainer.appendChild(dot);
-});
+// Menu móvel
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
 
-const dots = document.querySelectorAll('.dot');
-
-function goToSlide(index) {
-  slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
-  currentSlide = index;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
-  restartSlider();
+function setMenu(open) {
+  nav.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
 }
 
-function nextSlide() {
-  goToSlide((currentSlide + 1) % slides.length);
-}
-
-function restartSlider() {
-  clearInterval(intervalId);
-  intervalId = setInterval(nextSlide, 4200);
-}
-
-restartSlider();
-
-document.querySelector('.menu-btn').addEventListener('click', () => {
-  document.querySelector('.nav').classList.toggle('open');
+menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav.classList.contains('open')) {
+    setMenu(false);
+    menuBtn.focus();
+  }
+});
+document.addEventListener('click', event => {
+  if (nav.classList.contains('open') && !nav.contains(event.target) && !menuBtn.contains(event.target)) setMenu(false);
 });
 
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => document.querySelector('.nav').classList.remove('open'));
-});
+// Animação de entrada
+const revealItems = document.querySelectorAll('.reveal');
 
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('show');
-  });
-}, { threshold: 0.16 });
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+  revealItems.forEach(element => revealObserver.observe(element));
+} else {
+  revealItems.forEach(element => element.classList.add('show'));
+}
+
+// Ano no rodapé
+document.getElementById('ano').textContent = new Date().getFullYear();

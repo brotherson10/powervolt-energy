@@ -4,177 +4,467 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Powervolt Energy | Energia Solar e Mobilidade Elétrica</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Powervolt Energy | Energia Solar, Baterias e Carregadores EV em Azambuja</title>
+  <meta name="description" content="Instalação de painéis solares para autoconsumo, baterias de armazenamento e carregadores de veículos elétricos em Azambuja. Peça o seu orçamento pelo WhatsApp.">
+  <link rel="canonical" href="https://powervoltenergy.pt/">
+  <meta name="theme-color" content="#07090d">
+
+  <!-- Partilha em redes sociais e WhatsApp (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Powervolt Energy">
+  <meta property="og:title" content="Powervolt Energy | Energia Solar em Azambuja">
+  <meta property="og:description" content="Painéis solares, baterias de backup e carregadores de veículos elétricos para casas e pequenos negócios.">
+  <meta property="og:url" content="https://powervoltenergy.pt/">
+  <meta property="og:image" content="https://powervoltenergy.pt/assets/img/web/og-powervolt.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logótipo da Powervolt Energy sobre painéis solares instalados num telhado">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/web/paineis-telha-900.webp" imagesrcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w" imagesizes="(max-width: 900px) 92vw, 34vw" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=4">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://powervoltenergy.pt/#empresa",
+    "name": "Powervolt Energy",
+    "description": "Energia solar para autoconsumo, baterias de armazenamento e backup, e carregamento de veículos elétricos para casas e pequenos negócios.",
+    "url": "https://powervoltenergy.pt/",
+    "logo": "https://powervoltenergy.pt/assets/img/web/logo-powervolt.png",
+    "image": "https://powervoltenergy.pt/assets/img/web/og-powervolt.jpg",
+    "telephone": "+351930646567",
+    "email": "powervoltenergy.pt@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. José Clemente Nº 4 R/C LJDT",
+      "postalCode": "2050-260",
+      "addressLocality": "Azambuja",
+      "addressCountry": "PT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.0735905,
+      "longitude": -8.8639821
+    },
+    "hasMap": "https://maps.google.com/?cid=16781300282682607744",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/powervolt.pt/",
+      "https://maps.google.com/?cid=16781300282682607744"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="energy-grid"></div>
+  <!-- Ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"/></symbol>
+      <symbol id="i-battery" viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2.5"/><path d="M21.5 10.5v3M10.8 9.2l-2 3h3.4l-2 3"/></symbol>
+      <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v4M15 3v4M6.5 7h11v3.5a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v2.5a2.5 2.5 0 0 0 2.5 2.5H17"/></symbol>
+      <symbol id="i-whats" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.6-2-1-1 .9c-1-.4-2.3-1.7-2.7-2.7l.9-1-1-2z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></symbol>
+      <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5v11"/></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0 4.9 4.9l-9 9a2.1 2.1 0 0 1-3-3l9-9a4 4 0 0 0-1.9-1.9z"/><path d="M14.5 5.5 17 3l4 4-2.5 2.5"/></symbol>
+      <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.8 6.6a7.5 7.5 0 1 0 10.4 0"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-5h4v5"/></symbol>
+    </defs>
+  </svg>
 
-  <header class="header">
-    <a href="#inicio" class="logo">
-      <img src="assets/img/logo-powervolt.png" alt="Powervolt Energy">
-    </a>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
 
-    <button class="menu-btn" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
-    </button>
+  <header class="header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Powervolt Energy, voltar ao início">
+        <img src="assets/img/web/logo-powervolt.webp" alt="Powervolt Energy" width="410" height="128">
+      </a>
 
-    <nav class="nav">
-      <a href="#sobre">Sobre</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#obras">Obras</a>
-      <a href="#contato">Contato</a>
-    </nav>
+      <nav class="nav" id="menu" aria-label="Menu principal">
+        <a href="#solucoes">Soluções</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#obras">Obras</a>
+        <a href="#opinioes">Opiniões</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>
+          <span>Pedir orçamento</span>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
+  <main id="conteudo">
+    <!-- INÍCIO -->
     <section class="hero" id="inicio">
-      <div class="hero-content reveal">
-        <span class="eyebrow">Energia solar • Backup • Mobilidade elétrica</span>
-        <h1>Autonomia energética com tecnologia, poupança e futuro.</h1>
-        <p>
-          Soluções de energia solar para autoconsumo, baterias de armazenamento e carregamento de veículos elétricos
-          para residências e pequenos negócios.
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="pulse" aria-hidden="true"></span>Energia solar · Baterias · Carregadores&nbsp;EV</span>
+          <h1>Autonomia energética com tecnologia, <em>poupança</em> e futuro.</h1>
+          <p class="lead">
+            Soluções de energia solar para autoconsumo, baterias de armazenamento e carregamento de veículos elétricos
+            para residências e pequenos negócios.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20uma%20an%C3%A1lise%20para%20energia%20solar." class="btn btn-primary" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>
+              Pedir análise no WhatsApp
+            </a>
+            <a href="#solucoes" class="btn btn-ghost">Ver soluções</a>
+          </div>
+          <a class="rating" href="#opinioes">
+            <span class="stars" aria-hidden="true">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </span>
+            <span><strong>5,0</strong> no Google · ler opiniões</span>
+          </a>
+        </div>
+
+        <div class="hero-media reveal">
+          <figure class="hm hm-main">
+            <img src="assets/img/web/paineis-telha-900.webp"
+              srcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w"
+              sizes="(max-width: 900px) 92vw, 34vw" width="900" height="1200" fetchpriority="high"
+              alt="Painéis solares instalados num telhado de telha">
+            <figcaption class="chip"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Estamos em Azambuja</figcaption>
+          </figure>
+          <figure class="hm">
+            <img src="assets/img/web/inversor-baterias-2-480.webp" width="480" height="640"
+              alt="Inversor e duas baterias de armazenamento instalados numa parede">
+          </figure>
+          <figure class="hm">
+            <img src="assets/img/web/carregador-ev-480.webp" width="480" height="640"
+              alt="Carregador de veículo elétrico instalado numa parede">
+          </figure>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="trust reveal" aria-label="Porquê a Powervolt">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Avaliação 5,0 no Google</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Acompanhamento do início ao fim</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Casas e pequenos negócios</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Azambuja e região de Lisboa</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container split">
+        <div class="reveal">
+          <span class="section-tag">Quem somos</span>
+          <h2>Projetos ajustados à realidade de cada cliente.</h2>
+        </div>
+        <p class="reveal big-text">
+          A Powervolt Energy acompanha cada projeto de forma direta, desde a análise inicial até à instalação final e
+          colocação em funcionamento, privilegiando eficiência e poupança real.
         </p>
-        <div class="hero-actions">
-          <a href="#contato" class="btn primary">Pedir análise</a>
-          <a href="#solucoes" class="btn ghost">Ver soluções</a>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section class="section" id="solucoes">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Soluções</span>
+          <h2>Simples, eficiente e preparado para o futuro.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon"><svg aria-hidden="true"><use href="#i-sun"/></svg></span>
+              <span class="card-number">01</span>
+            </div>
+            <h3>Energia Solar</h3>
+            <p>Produção de eletricidade a partir do sol para reduzir a energia comprada à rede.</p>
+            <a class="card-link" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20pain%C3%A9is%20solares." target="_blank" rel="noopener">
+              Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon"><svg aria-hidden="true"><use href="#i-battery"/></svg></span>
+              <span class="card-number">02</span>
+            </div>
+            <h3>Baterias e Backup</h3>
+            <p>Mais autonomia, segurança e melhor aproveitamento da energia produzida durante o dia.</p>
+            <a class="card-link" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20baterias%20e%20backup." target="_blank" rel="noopener">
+              Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="card-icon"><svg aria-hidden="true"><use href="#i-plug"/></svg></span>
+              <span class="card-number">03</span>
+            </div>
+            <h3>Carregamento EV</h3>
+            <p>Carregamento seguro, prático e eficiente em casa ou na empresa.</p>
+            <a class="card-link" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20um%20carregador%20de%20ve%C3%ADculo%20el%C3%A9trico." target="_blank" rel="noopener">
+              Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="slider reveal">
-        <div class="orbit"></div>
-        <div class="slides">
-          <article class="slide active">
-            <img src="assets/img/img-paineis1.jpeg" alt="Imagem de instalação solar"
-              onerror="this.style.display='none'">
-            <div class="placeholder">Imagem 01</div>
-            <span>Produção solar inteligente</span>
-          </article>
-          <article class="slide">
-            <img src="assets/img/img-inv-bat.jpeg" alt="Imagem de bateria de backup"
-              onerror="this.style.display='none'">
-            <div class="placeholder">Imagem 02</div>
-            <span>Baterias e backup</span>
-          </article>
-          <article class="slide">
-            <img src="assets/img/img-cve.jpeg" alt="Imagem de carregador de veículo elétrico"
-              onerror="this.style.display='none'">
-            <div class="placeholder">Imagem 03</div>
-            <span>Carregamento veículo elétrico</span>
-          </article>
+    <!-- COMO TRABALHAMOS -->
+    <section class="section" id="processo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Como trabalhamos</span>
+          <h2>Do primeiro contacto à energia a funcionar.</h2>
         </div>
-        <div class="slider-dots" aria-label="Navegação do slider"></div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-icon"><svg aria-hidden="true"><use href="#i-search"/></svg></span>
+            <span class="step-number">01</span>
+            <h3>Análise</h3>
+            <p>Percebemos o seu consumo, o espaço disponível e o que pretende poupar.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-icon"><svg aria-hidden="true"><use href="#i-plan"/></svg></span>
+            <span class="step-number">02</span>
+            <h3>Projeto</h3>
+            <p>Desenhamos uma solução ajustada à sua realidade e explicamos cada escolha.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-icon"><svg aria-hidden="true"><use href="#i-tool"/></svg></span>
+            <span class="step-number">03</span>
+            <h3>Instalação</h3>
+            <p>A nossa equipa instala o sistema com cuidado, segurança e o mínimo de incómodo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-icon"><svg aria-hidden="true"><use href="#i-power"/></svg></span>
+            <span class="step-number">04</span>
+            <h3>Em funcionamento</h3>
+            <p>Colocamos tudo a funcionar e continuamos por perto, com o mesmo acompanhamento direto.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section split" id="sobre">
-      <div class="reveal">
-        <span class="section-tag">Quem somos</span>
-        <h2>Projetos ajustados à realidade de cada cliente.</h2>
-      </div>
-      <p class="reveal">
-        A Powervolt Energy acompanha cada projeto de forma direta, desde a análise inicial até à instalação final e
-        colocação em funcionamento, privilegiando eficiência e poupança real.
-      </p>
-    </section>
-
-    <section class="section cards" id="solucoes">
-      <div class="section-title reveal">
-        <span class="section-tag">Soluções</span>
-        <h2>Simples, eficiente e preparado para o futuro.</h2>
-      </div>
-
-      <div class="cards-grid">
-        <article class="card reveal">
-          <span class="card-number">01</span>
-          <h3>Energia Solar</h3>
-          <p>Produção de eletricidade a partir do sol para reduzir a energia comprada à rede.</p>
-        </article>
-        <article class="card reveal">
-          <span class="card-number">02</span>
-          <h3>Baterias & Backup</h3>
-          <p>Mais autonomia, segurança e melhor aproveitamento da energia produzida durante o dia.</p>
-        </article>
-        <article class="card reveal">
-          <span class="card-number">03</span>
-          <h3>Carregamento EV</h3>
-          <p>Carregamento seguro, prático e eficiente em casa ou na empresa.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section metrics">
-      <div class="metric reveal"><strong>↓</strong><span>Redução da fatura</span></div>
-      <div class="metric reveal"><strong>↟</strong><span>Autonomia energética</span></div>
-      <div class="metric reveal"><strong>●</strong><span>Soluções sustentáveis</span></div>
-    </section>
-
-    <section class="section works" id="obras">
-      <div class="section-title reveal">
-        <span class="section-tag">Portfólio</span>
-        <h2>Obras e trabalhos realizados</h2>
-        <p>Espaço preparado para adicionar imagens reais dos projetos.</p>
-      </div>
-      <div class="works-grid">
-        <article class="work reveal">
-          <div class="work-image">
-            <img src="./assets/img/img-paineis3.jpeg" alt="Projeto Solar">
+    <!-- OBRAS -->
+    <section class="section" id="obras">
+      <div class="container">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <span class="section-tag">Portfólio</span>
+            <h2>Obras e trabalhos realizados</h2>
           </div>
+          <a class="btn btn-ghost" href="https://www.instagram.com/powervolt.pt/" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg>
+            Mais obras no Instagram
+          </a>
+        </div>
 
-          <div class="work-content">
-            <span>01</span>
-            <h3>Projeto Solar</h3>
-          </div>
-        </article>
-
-        <article class="work reveal">
-          <div class="work-image">
-            <img src="./assets/img/img-inv-bat2.jpeg" alt="Backup">
-          </div>
-
-          <div class="work-content">
-            <span>02</span>
-            <h3>Backup</h3>
-          </div>
-        </article>
-
-        <article class="work reveal">
-          <div class="work-image">
-            <img src="./assets/img/img-cve.jpeg" alt="Carregador EV">
-          </div>
-
-          <div class="work-content">
-            <span>03</span>
-            <h3>Carregador EV</h3>
-          </div>
-        </article>
+        <div class="gallery">
+          <figure class="g-item g-big reveal">
+            <img src="assets/img/web/paineis-chapa-900.webp" width="900" height="1200" loading="lazy"
+              alt="Painéis solares instalados num telhado de chapa vermelha">
+            <figcaption>Painéis em telhado de chapa</figcaption>
+          </figure>
+          <figure class="g-item reveal">
+            <img src="assets/img/web/paineis-cobertura-480.webp" width="480" height="640" loading="lazy"
+              alt="Painéis solares numa cobertura metálica">
+            <figcaption>Painéis em cobertura metálica</figcaption>
+          </figure>
+          <figure class="g-item reveal">
+            <img src="assets/img/web/inversor-baterias-480.webp" width="480" height="640" loading="lazy"
+              alt="Inversor e baterias de armazenamento empilhadas">
+            <figcaption>Inversor e baterias</figcaption>
+          </figure>
+          <figure class="g-item reveal">
+            <img src="assets/img/web/inversor-bateria-3-480.webp" width="480" height="640" loading="lazy"
+              alt="Inversor solar e bateria de armazenamento instalados numa garagem">
+            <figcaption>Inversor e bateria</figcaption>
+          </figure>
+          <figure class="g-item reveal">
+            <img src="assets/img/web/paineis-telha-480.webp" width="480" height="640" loading="lazy"
+              alt="Painéis solares num telhado de telha numa zona residencial">
+            <figcaption>Painéis em telhado de telha</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="contact" id="contato">
-      <div class="contact-card reveal">
-        <span class="section-tag">Contato</span>
-        <h2>Vamos transformar energia em poupança?</h2>
-        <p>Energia solar não é apenas poupança. É autonomia, segurança e futuro.</p>
-        <div class="contact-links">
-          <a href="tel:+351930646567">(+351) 930 646 567</a>
-          <a href="mailto:powervoltenergy.pt@gmail.com">powervoltenergy.pt@gmail.com</a>
-          <span>Rua Canal do Tejo, G-66, Bobadela, Loures</span>
+    <!-- OPINIÕES -->
+    <section class="section" id="opinioes">
+      <div class="container">
+        <div class="reviews-head reveal">
+          <div>
+            <span class="section-tag">Opiniões</span>
+            <h2>O que dizem os nossos clientes.</h2>
+          </div>
+          <a class="score" href="https://maps.google.com/?cid=16781300282682607744" target="_blank" rel="noopener">
+            <strong>5,0</strong>
+            <span class="stars" aria-hidden="true">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </span>
+            <span class="score-label">Avaliação no Google</span>
+          </a>
+        </div>
+
+        <div class="reviews">
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 estrelas">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+            </span>
+            <blockquote>“Melhor experiência que tive, equipa muito prestativa e profissional! Recomendo sem medo de errar”</blockquote>
+            <figcaption><strong>Alfonso Larrosa</strong><span>Opinião no Google</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 estrelas">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+            </span>
+            <blockquote>“Bons profissionais e competentes naquilo que fizeram. Recomendo.”</blockquote>
+            <figcaption><strong>Jose Carlos Simao</strong><span>Opinião no Google</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" role="img" aria-label="5 estrelas">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+            </span>
+            <blockquote>“Trabalho profissional. Recomendo”</blockquote>
+            <figcaption><strong>Carlos Ribeiro</strong><span>Opinião no Google</span></figcaption>
+          </figure>
+        </div>
+
+        <a class="link-more reveal" href="https://maps.google.com/?cid=16781300282682607744" target="_blank" rel="noopener">
+          Ver todas as opiniões no Google <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact-info">
+            <span class="section-tag">Contacto</span>
+            <h2>Vamos transformar energia em poupança?</h2>
+            <p>Energia solar não é apenas poupança. É autonomia, segurança e futuro. Fale connosco pelo WhatsApp, por telefone ou visite-nos em Azambuja.</p>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true"><use href="#i-whats"/></svg>
+                Falar no WhatsApp
+              </a>
+              <a class="btn btn-ghost" href="tel:+351930646567">
+                <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+                Ligar
+              </a>
+            </div>
+
+            <ul class="contact-list">
+              <li>
+                <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div>
+                  <span class="label">Morada</span>
+                  <address>R. José Clemente Nº 4 R/C LJDT, 2050-260 Azambuja</address>
+                  <a class="inline-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Powervolt%20Energy%2C%20R.%20Jos%C3%A9%20Clemente%204%2C%202050-260%20Azambuja" target="_blank" rel="noopener">Como chegar</a>
+                </div>
+              </li>
+              <li>
+                <svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>
+                <div>
+                  <span class="label">Horário</span>
+                  <span>Segunda a sexta, das 08:00 às 17:00</span>
+                  <span class="muted">Sábado e domingo, encerrado</span>
+                </div>
+              </li>
+              <li>
+                <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+                <div>
+                  <span class="label">Telemóvel e WhatsApp</span>
+                  <a href="tel:+351930646567">(+351) 930 646 567</a>
+                </div>
+              </li>
+              <li>
+                <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+                <div>
+                  <span class="label">Email</span>
+                  <a href="mailto:powervoltenergy.pt@gmail.com">powervoltenergy.pt<wbr>@gmail.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-map">
+            <iframe title="Mapa com a localização da Powervolt Energy em Azambuja"
+              src="https://maps.google.com/maps?q=Powervolt%20Energy%2C%20R.%20Jos%C3%A9%20Clemente%204%2C%202050-260%20Azambuja&amp;z=16&amp;hl=pt-PT&amp;output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Powervolt Energy. Todos os direitos reservados.</p>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/web/logo-powervolt.webp" alt="Powervolt Energy" width="410" height="128" loading="lazy">
+        <p>Energia solar, baterias e carregamento de veículos elétricos para casas e pequenos negócios.</p>
+      </div>
+      <div>
+        <h3>Contactos</h3>
+        <a href="tel:+351930646567">(+351) 930 646 567</a>
+        <a href="mailto:powervoltenergy.pt@gmail.com">powervoltenergy.pt<wbr>@gmail.com</a>
+        <a href="https://www.instagram.com/powervolt.pt/" target="_blank" rel="noopener">Instagram @powervolt.pt</a>
+      </div>
+      <div>
+        <h3>Morada</h3>
+        <address>R. José Clemente Nº 4 R/C LJDT<br>2050-260 Azambuja</address>
+        <a href="https://maps.google.com/?cid=16781300282682607744" target="_blank" rel="noopener">Ver no Google Maps</a>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <span>Segunda a sexta, 08:00 às 17:00</span>
+        <span>Sábado e domingo, encerrado</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="ano">2026</span> Powervolt Energy. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <a class="wa-float" href="https://wa.me/351930646567?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a Powervolt no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whats"/></svg>
+  </a>
+
+  <script src="script.js?v=2"></script>
 </body>
 
 </html>
