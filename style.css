@@ -410,13 +410,6 @@ p {
   aspect-ratio: auto;
 }
 
-.hm-main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(7, 9, 13, .55), transparent 40%);
-}
-
 .chip {
   position: absolute;
   left: 16px;
