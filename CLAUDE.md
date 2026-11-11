@@ -6,7 +6,8 @@
 
 ## O cliente
 
-- **Empresa:** Powervolt Energy, de Portugal (Azambuja)
+- **Empresa:** Powervolt Energy, de Portugal. Escritório e armazém em Azambuja
+- **Zona de atuação (confirmada pelo Brotherson, 11/2026):** instala em grande parte do país, de Leiria ao Algarve (Lisboa, Margem Sul, Algarve, Leiria...). No site aparece como "De Leiria ao Algarve" e no JSON-LD como `areaServed`. A morada e os contactos ficam só no final da página
 - **O que faz:** energia solar para autoconsumo, baterias de armazenamento e backup, e carregamento de veículos elétricos, para residências e pequenos negócios
 - **Contactos (fonte: ficha do Google Maps, 11/2026):**
   - Morada: `R. José Clemente Nº 4 R/C LJDT, 2050-260 Azambuja` (escrever sempre exatamente assim)
@@ -61,7 +62,6 @@ SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-L
 ## Pendências
 
 - [ ] Confirmar com o cliente os textos da secção "Como trabalhamos" (foram escritos a partir do texto do "Sobre")
-- [ ] Confirmar a zona de atuação ("Azambuja e região de Lisboa", tirada do Instagram)
 - [ ] Fotos de mais obras e a foto da loja nova em Azambuja (a ficha do Google tem uma)
 - [ ] Rever a nota e as opiniões de vez em quando, se entrarem novas no Google
 - [ ] Google Meu Negócio: confirmar quem gere a ficha, pôr categorias, serviços, fotos e descrição
