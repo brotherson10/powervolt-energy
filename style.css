@@ -1081,18 +1081,10 @@ p {
 }
 
 /* ---------- Responsivo ---------- */
-@media (max-width: 1180px) {
-  .trust {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trust li:nth-child(3) {
-    border-left: 0;
-  }
-
-  .trust li:nth-child(n + 3) {
-    border-top: 1px solid rgba(22, 16, 0, .16);
+@media (max-width: 900px) {
+  .trust li {
+    flex: 1 1 0;
+    white-space: normal;
   }
 }
 
