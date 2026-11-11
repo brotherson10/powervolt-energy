@@ -7,7 +7,7 @@
 ## O cliente
 
 - **Empresa:** Powervolt Energy, de Portugal. Escritório e armazém em Azambuja
-- **Zona de atuação (confirmada pelo Brotherson, 11/2026):** instala em grande parte do país, de Leiria ao Algarve (Lisboa, Margem Sul, Algarve, Leiria...). No site aparece como "De Leiria ao Algarve" e no JSON-LD como `areaServed`. A morada e os contactos ficam só no final da página
+- **Zona de atuação (confirmada pelo Brotherson, 11/2026):** instala em todo o país (já fez obras em Lisboa, Margem Sul, Algarve, Leiria...). No site aparece como "Atuamos em todo o país" e no JSON-LD como `areaServed: Portugal`. A morada e os contactos ficam só no final da página
 - **O que faz:** energia solar para autoconsumo, baterias de armazenamento e backup, e carregamento de veículos elétricos, para residências e pequenos negócios
 - **Contactos (fonte: ficha do Google Maps, 11/2026):**
   - Morada: `R. José Clemente Nº 4 R/C LJDT, 2050-260 Azambuja` (escrever sempre exatamente assim)
@@ -55,7 +55,7 @@
 
 ## Estrutura atual
 
-`#inicio` (hero com 3 fotos) → faixa âmbar de confiança → `#sobre` (foto de fundo) → `#solucoes` (3 cards com orçamento por WhatsApp) → `#processo` (4 passos, sem numeração) → `#obras` (galeria) → `#opinioes` (nota Google + 3 opiniões) → `#contacto` (contactos, horário, mapa) → rodapé
+`#inicio` (hero com a foto de uma obra como fundo, da metade para a direita, e degradê escuro atrás do texto; no telemóvel a foto fica por trás de tudo) → faixa âmbar de confiança → `#sobre` (foto de fundo) → `#solucoes` (3 cards com orçamento por WhatsApp) → `#processo` (4 passos, sem numeração) → `#obras` (galeria) → `#opinioes` (nota Google + 3 opiniões) → `#contacto` (contactos, horário, mapa) → rodapé
 
 SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-LD `LocalBusiness` (morada, geo, horário, `hasMap`, `sameAs`), mapa incorporado.
 

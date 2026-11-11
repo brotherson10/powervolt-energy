@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Powervolt Energy | Energia Solar, Baterias e Carregadores EV em Azambuja</title>
-  <meta name="description" content="Painéis solares, baterias e carregadores de veículos elétricos. Sede em Azambuja, com instalações de Leiria ao Algarve. Peça orçamento pelo WhatsApp.">
+  <meta name="description" content="Painéis solares, baterias e carregadores de veículos elétricos para casas e pequenos negócios em todo o país. Peça orçamento pelo WhatsApp.">
   <link rel="canonical" href="https://powervoltenergy.pt/">
   <meta name="theme-color" content="#07090d">
 
@@ -28,8 +28,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/web/paineis-telha-900.webp" imagesrcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w" imagesizes="(max-width: 900px) 92vw, 34vw" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="preload" as="image" media="(min-width: 701px)" imagesrcset="assets/img/web/hero-paineis-760.webp 760w, assets/img/web/hero-paineis-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 66vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(max-width: 700px)" imagesrcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=14">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -65,13 +66,7 @@
         "closes": "17:00"
       }
     ],
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Distrito de Santarém" },
-      { "@type": "AdministrativeArea", "name": "Distrito de Lisboa" },
-      { "@type": "AdministrativeArea", "name": "Distrito de Setúbal" },
-      { "@type": "AdministrativeArea", "name": "Distrito de Leiria" },
-      { "@type": "AdministrativeArea", "name": "Algarve" }
-    ],
+    "areaServed": { "@type": "Country", "name": "Portugal" },
     "sameAs": [
       "https://www.instagram.com/powervolt.pt/",
       "https://maps.google.com/?cid=16781300282682607744"
@@ -135,6 +130,13 @@
   <main id="conteudo">
     <!-- INÍCIO -->
     <section class="hero" id="inicio">
+      <picture class="hero-bg">
+        <source media="(max-width: 700px)" srcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w" sizes="100vw" width="900" height="1200">
+        <img src="assets/img/web/hero-paineis-1200.webp"
+          srcset="assets/img/web/hero-paineis-760.webp 760w, assets/img/web/hero-paineis-1200.webp 1200w"
+          sizes="(max-width: 900px) 100vw, 66vw" width="1200" height="900" fetchpriority="high"
+          alt="Painéis solares instalados pela Powervolt num telhado de telha">
+      </picture>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <span class="eyebrow"><span class="pulse" aria-hidden="true"></span>Energia solar · Baterias · Carregadores&nbsp;EV</span>
@@ -158,22 +160,6 @@
           </a>
         </div>
 
-        <div class="hero-media reveal">
-          <figure class="hm hm-main">
-            <img src="assets/img/web/paineis-telha-900.webp"
-              srcset="assets/img/web/paineis-telha-480.webp 480w, assets/img/web/paineis-telha-900.webp 900w"
-              sizes="(max-width: 900px) 92vw, 34vw" width="900" height="1200" fetchpriority="high"
-              alt="Painéis solares instalados num telhado de telha">
-          </figure>
-          <figure class="hm">
-            <img src="assets/img/web/inversor-baterias-2-480.webp" width="480" height="640"
-              alt="Inversor e duas baterias de armazenamento instalados numa parede">
-          </figure>
-          <figure class="hm">
-            <img src="assets/img/web/carregador-ev-480.webp" width="480" height="640"
-              alt="Carregador de veículo elétrico instalado numa parede">
-          </figure>
-        </div>
       </div>
     </section>
 
@@ -184,7 +170,7 @@
           <li><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>Avaliação 5,0 no Google</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Acompanhamento do início ao fim</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Casas e pequenos negócios</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>De Leiria ao Algarve</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Atuamos em todo o país</li>
         </ul>
       </div>
     </section>
@@ -319,9 +305,9 @@
             <figcaption>Inversor e bateria</figcaption>
           </figure>
           <figure class="g-item reveal">
-            <img src="assets/img/web/paineis-telha-480.webp" width="480" height="640" loading="lazy"
-              alt="Painéis solares num telhado de telha numa zona residencial">
-            <figcaption>Painéis em telhado de telha</figcaption>
+            <img src="assets/img/web/carregador-ev-480.webp" width="480" height="640" loading="lazy"
+              alt="Carregador de veículo elétrico instalado numa parede">
+            <figcaption>Carregador de veículo elétrico</figcaption>
           </figure>
         </div>
       </div>
