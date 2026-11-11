@@ -162,14 +162,6 @@ p {
   margin-bottom: 18px;
 }
 
-.section-tag::before {
-  content: "";
-  width: 22px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--solar);
-}
-
 .eyebrow {
   padding: 8px 14px;
   border: 1px solid rgba(255, 173, 20, .25);
@@ -576,8 +568,8 @@ p {
   flex-wrap: wrap;
 }
 
-#contacto {
-  padding-bottom: clamp(56px, 7vw, 88px);
+.section#contacto {
+  padding: clamp(40px, 5vw, 56px) 0;
 }
 
 .split {
@@ -777,6 +769,7 @@ p {
   padding: 40px 18px 16px;
   background: linear-gradient(to top, rgba(7, 9, 13, .9) 0%, rgba(7, 9, 13, .55) 55%, transparent 100%);
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+  color: #e5e8ec;
   font-weight: 600;
   font-size: .94rem;
 }
@@ -886,24 +879,35 @@ p {
 }
 
 .contact-info {
-  padding: clamp(28px, 5vw, 60px);
+  padding: clamp(26px, 3.4vw, 44px);
+}
+
+.contact-info .section-tag {
+  margin-bottom: 12px;
+}
+
+.contact-info h2 {
+  font-size: clamp(1.75rem, 2.6vw, 2.35rem);
 }
 
 .contact-info > p {
-  margin: 18px 0 28px;
-  max-width: 520px;
+  margin: 12px 0 22px;
+  max-width: 480px;
+  font-size: .95rem;
 }
 
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 36px;
+  margin-bottom: 26px;
 }
 
 .contact-list {
   display: grid;
-  gap: 22px;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  font-size: .94rem;
 }
 
 .contact-list li {
@@ -956,7 +960,7 @@ p {
 
 .contact-map {
   position: relative;
-  min-height: 420px;
+  min-height: 360px;
   border-left: 1px solid var(--line);
 }
 
@@ -1228,6 +1232,10 @@ p {
 
   .contact-info {
     padding: 28px 22px;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
   }
 
   .hero-actions .btn,
