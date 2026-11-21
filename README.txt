@@ -1,26 +1,19 @@
-# ⚡ Powervolt Energy
+# Solarnex
 
-Landing page moderna para empresa de energia solar.
+Landing page da Solarnex (Solarnex Unipessoal LDA), empresa de energia solar em Azambuja, Portugal.
+Energia que move o futuro.
 
-## 🚀 Tecnologias
+## Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
 
-## ✨ Funcionalidades
+## Deploy
 
-- Layout responsivo
-- Hero com slider
-- Cards interativos
-- Animações de scroll
-- Glassmorphism
-- Design moderno
+Netlify, automático a partir do main.
+https://solarnex.pt/
 
-## 🌐 Deploy
-
-https://powervolt-energy.netlify.app/
-
-## 👨‍💻 Desenvolvido por
+## Desenvolvido por
 
 Brotherson Américo

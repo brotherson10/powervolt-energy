@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://powervoltenergy.pt/sitemap.xml
+Sitemap: https://solarnex.pt/sitemap.xml

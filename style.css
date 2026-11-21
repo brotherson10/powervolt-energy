@@ -1,4 +1,4 @@
-/* Powervolt Energy · identidade do cliente: escuro + âmbar solar + Inter */
+/* Solarnex · identidade do cliente: escuro + âmbar solar + Inter */
 :root {
   --bg: #07090d;
   --bg-soft: #10141c;
@@ -258,9 +258,16 @@ p {
   gap: 24px;
 }
 
+.logo {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
 .logo img {
-  height: 44px;
-  width: auto;
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
   transition: transform .3s var(--ease);
 }
 
@@ -963,9 +970,20 @@ p {
 }
 
 .footer-brand img {
-  height: 40px;
-  width: auto;
-  margin-bottom: 16px;
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-slogan {
+  display: block;
+  margin: 10px 0 16px;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .27em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .footer-brand p {
@@ -1142,7 +1160,7 @@ p {
   }
 
   .logo img {
-    height: 38px;
+    width: 250px;
   }
 
   .menu-btn {
@@ -1235,6 +1253,10 @@ p {
 
   .header-actions .btn-sm span {
     display: none;
+  }
+
+  .logo img {
+    width: 200px;
   }
 
   .header-actions .btn-sm {

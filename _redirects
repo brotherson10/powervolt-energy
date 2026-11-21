@@ -1,0 +1,5 @@
+# Domínio antigo e endereços alternativos apontam para o domínio novo
+https://powervoltenergy.pt/*      https://solarnex.pt/:splat  301!
+https://www.powervoltenergy.pt/*  https://solarnex.pt/:splat  301!
+https://powervolt-energy.netlify.app/*  https://solarnex.pt/:splat  301!
+https://www.solarnex.pt/*         https://solarnex.pt/:splat  301!
