@@ -46,7 +46,8 @@
 - **Ritmo de fundos (inspirado em Soty Solar, iPower e Solfácil):** hero escuro → faixa âmbar → foto em ecrã inteiro com camada escura (Quem somos) → claro (Soluções) → grafite (Como trabalhamos) → claro (Obras) → escuro (Opiniões) → âmbar (Contacto) → preto (rodapé). Nunca duas secções seguidas com o mesmo fundo
 - Ícones: SVG de traço (1.8), definidos num sprite no topo do `index.html`
 - Botão flutuante de WhatsApp em verde `#25d366` (cor reconhecível do WhatsApp, única exceção à paleta)
-- Logo: `assets/img/web/logo-solarnex.webp` (horizontal, símbolo + nome, sem fundo, 1038x96). Versão empilhada com o slogan, sem fundo: `logo-solarnex-completo.png`. Original enviado pelo cliente (só existe este JPG, fundo preto): `assets/img/logo-solarnex.jpg`. Favicon e ícones com o símbolo sobre preto. Imagem de partilha: `og-solarnex.jpg`
+- **Kit de marca** em `assets/img/marca/` (gerado no GPT a partir do JPG do cliente, conferido com o original): 01 horizontal para fundo escuro, 02 horizontal para fundo claro, 03 e 04 empilhado com slogan (escuro/claro), 05 símbolo, 06 ícone sobre preto, 07 perfil do Instagram, 08 e 09 monocromático branco/preto, 10 capa 1200x630. Todos PNG, os sem fundo com transparência real. Não há vetor
+- Logo do site: `assets/img/web/logo-solarnex.webp` (tirado do 01, 900x111). No topo a largura é fluida (`clamp(210px, 21vw, 290px)`); entre 901 e 1080 px o botão "Pedir orçamento" fica só com o ícone para o menu caber numa linha. `logo-solarnex-completo.png` vem do 03. Favicon com o símbolo (05), `apple-touch-icon` e `icone-512` do 06, `og-solarnex.jpg` = foto de obra + empilhado. JSON-LD `logo` = 07. O JPG original do cliente fica em `assets/img/logo-solarnex.jpg`
 - No rodapé o slogan aparece por baixo do logo, em maiúsculas espaçadas, como no logo original
 
 ## Idioma e escrita do site
@@ -69,7 +70,7 @@ SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-L
 - [ ] Depois do push: trocar o link "Site" da bio do Instagram (ainda aponta para powervoltenergy.pt) e o site da ficha do Google
 - [ ] Google Search Console: adicionar solarnex.pt e usar "Alteração de endereço" a partir de powervoltenergy.pt
 - [ ] Confirmar com o cliente se o nome no site é "Solarnex" ou "Solarnex Energy" (a ficha do Google aparece como "Solarnex Energy")
-- [ ] Pedir ao cliente o logo em PNG sem fundo ou vetor, se o designer tiver
+- [ ] Se o designer tiver o logo em vetor (SVG/PDF), guardar em `assets/img/marca/`
 - [ ] Confirmar com o cliente os textos da secção "Como trabalhamos" (foram escritos a partir do texto do "Sobre")
 - [ ] Fotos de mais obras e a foto da loja nova em Azambuja (a ficha do Google tem uma)
 - [ ] Rever a nota e as opiniões de vez em quando, se entrarem novas no Google
@@ -82,3 +83,4 @@ SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-L
 - 11/11/2026: morada nova (Azambuja), dados da ficha do Google (horário, opiniões, mapa), refatoração visual completa, WhatsApp, SEO local (canonical, Open Graph, JSON-LD, sitemap) e imagens otimizadas (de ~1,1 MB para ~0,55 MB de imagens na página inteira, com a galeria em lazy load)
 - 11/11/2026 (2ª ronda): fundos alternados entre secções (claro, âmbar, foto, grafite), fotos com cantos retos na proporção original, cards com cantos menores, numeração tirada de "Como trabalhamos"
 - 21/11/2026: mudança de marca para Solarnex (Solarnex Unipessoal LDA). Logo novo (horizontal no topo e rodapé, com fundo removido do JPG do cliente), favicon e ícones, imagem de partilha nova, email e Instagram novos, domínio solarnex.pt (canonical, OG, JSON-LD com `legalName` e `slogan`, sitemap, robots), `_redirects` do domínio antigo, mapa por coordenadas
+- 21/11/2026 (2ª ronda): kit de marca do GPT em `assets/img/marca/`; logo, ícones e imagem de partilha refeitos a partir dele; topo ajustado para o logo novo entre 901 e 1180 px

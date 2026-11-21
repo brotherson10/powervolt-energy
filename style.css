@@ -259,13 +259,12 @@ p {
 }
 
 .logo {
-  flex-shrink: 1;
-  min-width: 0;
+  flex-shrink: 0;
 }
 
 .logo img {
   display: block;
-  width: 300px;
+  width: clamp(210px, 21vw, 290px);
   max-width: 100%;
   height: auto;
   transition: transform .3s var(--ease);
@@ -278,6 +277,7 @@ p {
 .nav {
   display: flex;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .nav a {
@@ -981,7 +981,7 @@ p {
   margin: 10px 0 16px;
   font-size: .68rem;
   font-weight: 500;
-  letter-spacing: .27em;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -1144,6 +1144,18 @@ p {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Entre 901 e 1080 px o botão do topo fica só com o ícone, para o logo e o menu caberem numa linha */
+@media (min-width: 901px) and (max-width: 1080px) {
+  .header-actions .btn-sm span {
+    display: none;
+  }
+
+  .header-actions .btn-sm {
+    width: 44px;
+    padding: 0;
   }
 }
 
