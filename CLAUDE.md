@@ -22,6 +22,8 @@
 
 ## Stack e deploy
 
+- **Tudo o que está no repositório fica público no site.** O `_redirects` devolve 404 para `CLAUDE.md` e `README.txt`; qualquer ficheiro interno novo tem de entrar lá ou ficar fora do repositório
+
 - Site estático: `index.html`, `style.css`, `script.js`. Sem build e sem dependências
 - Imagens usadas pelo site em `assets/img/web/` (WebP em 480 e 900 px de largura, OG 1200x630, logo recortado). Os JPEG originais em `assets/img/` ficam como fonte
 - `favicon.png`, `apple-touch-icon.png`, `robots.txt`, `sitemap.xml` na raiz
@@ -66,8 +68,8 @@ SEO local: `title` e `description` com Azambuja, `canonical`, Open Graph, JSON-L
 
 ## Pendências
 
-- [ ] Domínio solarnex.pt: no Netlify, adicionar `solarnex.pt` como domínio principal e `powervoltenergy.pt` como alias, apontar o DNS e esperar o HTTPS. **Só fazer push depois disso** (o `_redirects` manda tudo para solarnex.pt)
-- [ ] Depois do push: trocar o link "Site" da bio do Instagram (ainda aponta para powervoltenergy.pt) e o site da ficha do Google
+- [x] Domínio solarnex.pt no ar (24/11/2026): DNS na dominios.pt (A `@` 75.2.60.5, CNAME `www` powervolt-energy.netlify.app), Netlify com solarnex.pt principal e powervoltenergy.pt + www como alias, certificado cobre os 4. Todos redirecionam (301) para https://solarnex.pt/
+- [ ] Trocar o link "Site" da bio do Instagram (ainda aponta para powervoltenergy.pt) e o site da ficha do Google
 - [ ] Google Search Console: adicionar solarnex.pt e usar "Alteração de endereço" a partir de powervoltenergy.pt
 - [ ] Confirmar com o cliente se o nome no site é "Solarnex" ou "Solarnex Energy" (a ficha do Google aparece como "Solarnex Energy")
 - [ ] Se o designer tiver o logo em vetor (SVG/PDF), guardar em `assets/img/marca/`

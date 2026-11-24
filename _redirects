@@ -3,3 +3,7 @@ https://powervoltenergy.pt/*      https://solarnex.pt/:splat  301!
 https://www.powervoltenergy.pt/*  https://solarnex.pt/:splat  301!
 https://powervolt-energy.netlify.app/*  https://solarnex.pt/:splat  301!
 https://www.solarnex.pt/*         https://solarnex.pt/:splat  301!
+
+# Ficheiros internos do projeto não ficam acessíveis no site
+/CLAUDE.md   /404   404!
+/README.txt  /404   404!
